@@ -43,3 +43,26 @@ print("Winner:", winner)
 print("---------------------------------------------------------")
 print("Candidate Votes Dictionary:", candidate_votes)
 
+# Convert an integer to a string
+total_votes = 369711
+total_votes_str = str(total_votes)
+
+
+
+
+# Open a file in write mode ('w')
+with open("output_PyPoll.txt", "w") as file:
+    file.write("Election Results: " + "\n")
+    file.write("---------------------------------------------------------" + "\n")
+    file.write("Total Votes: " + total_votes_str + "\n")
+    file.write("---------------------------------------------------------" + "\n")
+    # Iterate over the candidate_votes dictionary
+    for candidate, votes in candidate_votes.items():
+        # Calculate the percentage of votes for each candidate
+        percentage = (votes / total_votes) * 100
+        # Write the candidate's name, percentage of votes, and total votes to the text file
+        file.write(f"{candidate}: {percentage:.3f}% ({votes})\n")
+    
+    file.write("---------------------------------------------------------" + "\n")
+    file.write("Winner: " + winner + "\n")
+    file.write("---------------------------------------------------------" + "\n")
