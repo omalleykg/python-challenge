@@ -48,8 +48,6 @@ total_votes = 369711
 total_votes_str = str(total_votes)
 
 
-
-
 # Open a file in write mode ('w')
 with open("output_PyPoll.txt", "w") as file:
     file.write("Election Results: " + "\n")
