@@ -19,18 +19,6 @@ with open(csvpath, mode='r') as file:
         else:
             candidate_votes[candidate_name] = 1
     
-    
-    #candidate_votes.append(int(row[1]))
-
-    #first_row = next(csv_reader)
-    #total_votes += 1
-    #candidate_name = first_row[2]  # Assuming candidate name is in the third column of the CSV
-    
-
-
-
-
-
 print("Election Results:")
 print("---------------------------------------------------------")
 print("Total Votes:", total_votes )
@@ -41,7 +29,7 @@ print("---------------------------------------------------------")
 winner = max(candidate_votes, key=candidate_votes.get)
 print("Winner:", winner)
 print("---------------------------------------------------------")
-print("Candidate Votes Dictionary:", candidate_votes)
+#print("Candidate Votes Dictionary:", candidate_votes)
 
 # Convert an integer to a string
 total_votes = 369711
